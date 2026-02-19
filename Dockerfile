@@ -2,6 +2,9 @@ FROM python:3.11.7-slim
 
 WORKDIR /app
 
+# Verify Python version
+RUN python --version
+
 # Copy requirements first for better caching
 COPY requirements.txt .
 
