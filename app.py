@@ -1,6 +1,6 @@
 from flask import Flask, render_template, request, redirect, url_for, session, flash, jsonify, abort, send_from_directory
-from firebase_config import auth, db
-from firebase_admin import auth as admin_auth, storage
+# from firebase_config import auth, db
+# from firebase_admin import auth as admin_auth, storage
 from datetime import datetime, date, timedelta
 from templates.academic_data import get_syllabus, get_available_subjects, ACADEMIC_SYLLABI
 from careers_data import CAREERS_DATA, COURSES_DATA, INTERNSHIPS_DATA, get_career_by_id, get_course_by_id, get_internship_by_id
