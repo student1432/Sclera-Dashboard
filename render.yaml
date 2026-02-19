@@ -1,6 +1,11 @@
 services:
   - type: web
     name: student-platform
-    env: docker
-    dockerContext: .
-    dockerfilePath: ./Dockerfile
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn app:app
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.11.7
+      - key: RENDER_PYTHON_VERSION
+        value: 3.11.7
